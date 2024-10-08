@@ -32,13 +32,13 @@ const Article = () => {
                 >
                     <CardNews 
                         key={idx}
-                        id={item.documentId }
-                        title={item.title}
-                        description={item.blocks[0].body}
-                        image={item.image}
-                        date={item.createdAt} 
-                        author={""} 
-                        category={item.category.name}
+                        id={item.id }
+                        title={item.attributes.title}
+                        description={item.attributes.blocks}
+                        image={item.attributes.image}
+                        date={item.attributes.createdAt} 
+                        author={""}
+                        category={item.attributes.category.data.attributes.name}
                     />
                 </Box>
             ))}
@@ -53,13 +53,13 @@ const Article = () => {
         {!loadingCat && dataByCat.slice(0, 3).map((item, idx) => (
             <CardNews 
                 key={idx}
-                id={item.documentId}
-                title={item.title}
-                description={item.blocks[0].body}
-                image={item.image}
-                date={item.createdAt} 
+                id={item.id}
+                title={item.attributes.title}
+                description={item.attributes.blocks}
+                image={item.attributes.image}
+                date={item.attributes.createdAt} 
                 recommendation={true}
-                category={item.category?.name}
+                category={item.attributes.category.data.attributes.name}
             />
         ))}
     </Stack>

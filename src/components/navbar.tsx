@@ -71,7 +71,7 @@ const Navbar: React.FC<INavbar> = ({ data }) => {
               </HStack>
               <Stack
                 flex={1}
-                justify={"start"}
+                textAlign={"center"}
                 align={"center"}
                 direction={"row"}
                 spacing={"1rem"}
@@ -94,9 +94,6 @@ const Navbar: React.FC<INavbar> = ({ data }) => {
             </Stack>
             <MenuDrawer>
               <MenuList data={data} />
-              <Button width={"full"} type="submit" mt={8} onClick={() => console.log("test")}>
-                {t("logout.title")}
-              </Button>
             </MenuDrawer>
           </Box>
         </Container>

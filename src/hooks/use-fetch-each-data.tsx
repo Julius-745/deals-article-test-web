@@ -11,13 +11,15 @@ const useFetchDataByCategory = () => {
     useEffect(() => {
         const fetchCat = async () => {
             try {
-                const { data } = await axios.get(`${baseURL}categories?populate=*`);
-                const categories = data.data.map((item: { name: string }) => item.name);
+                const { data } = await axios.get(`${baseURL}categories`);
+                const categories = data.data.map((item: {
+                    attributes: any; name: string 
+                    }) => item.attributes.name);
                 setCategory(categories);
 
 
                 const requests = categories.map((item: IArticles) => 
-                    axios.get(`${baseURL}articles?populate=*&filters[$and][0][category][name][$eq]=${item}&limit=1`)
+                    axios.get(`${baseURL}articles?populate=*&filters[$and][0][category][name][$eq]=${item}`)
                 );
 
                 const responses = await Promise.all(requests);

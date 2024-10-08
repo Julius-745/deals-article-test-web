@@ -16,6 +16,8 @@ const ArticleDetail = () => {
         refetch(); 
     }, [id, refetch]);
 
+    console.log("data", data)
+
     return (
         <Layout>
             <Grid 
@@ -29,13 +31,13 @@ const ArticleDetail = () => {
                         <p>Loading...</p>
                     ) : (
                         <CardNews  
-                            id={data.documentId}
+                            id={data.id}
                             detail={true}
-                            title={data.title}
-                            description={data.blocks[0].body}
-                            image={data.image}
-                            date={data.createdAt}  
-                            category={data.category?.name}
+                            title={data.attributes.title}
+                            description={data.attributes.blocks}
+                            image={data.attributes.image}
+                            date={data.attributes.createdAt} 
+                            category={data.attributes.category.data.attributes.name}
                         />
                     )}
                 </GridItem>
@@ -44,13 +46,13 @@ const ArticleDetail = () => {
                     {!loadingCat && dataByCat.slice(0, 3).map((item, idx) => (
                         <CardNews 
                             key={idx}
-                            id={item.documentId}
-                            title={item.title}
-                            description={item.blocks[0].body}
-                            image={item.image}
-                            date={item.createdAt} 
+                            id={item.id}
+                            title={item.attributes.title}
+                            description={item.attributes.blocks}
+                            image={item.attributes.image}
+                            date={item.attributes.createdAt} 
                             recommendation={true}
-                            category={item.category?.name}
+                            category={item.attributes.category.data.attributes.name}
                         />
                     ))}
                 </GridItem>
