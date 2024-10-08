@@ -1,4 +1,4 @@
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo-black.svg";
 import {
   Box,
   Button,

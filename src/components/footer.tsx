@@ -30,24 +30,24 @@ import {
                 w={{ base: 24, md: "auto" }}
               />
             </Flex>
-            <Text>{t("common.footer.shortDesc")}</Text>
-            <Text>{t("common.footer.description")}</Text>
-            <Text>{t("common.footer.otherDesc")}</Text>
-            <Text>{t("common.footer.download")}</Text>
+            <Text color={"white"}>{t("common.footer.shortDesc")}</Text>
+            <Text color={"white"}>{t("common.footer.description")}</Text>
+            <Text color={"white"}>{t("common.footer.otherDesc")}</Text>
+            <Text color={"white"}>{t("common.footer.download")}</Text>
           </VStack>
 
           <VStack maxW={{base:"", lg: "20%"}} alignItems={"left"} gap={8}>
             <Text fontSize={"24px"} >{t("common.footer.contact")}</Text>
-            <Text>deals@deals.com</Text>
-            <Text>{t("common.footer.addressIdn")}</Text>
-            <Text>{t("common.footer.addressLn")}</Text>
+            <Text color={"white"}>deals@deals.com</Text>
+            <Text color={"white"}>{t("common.footer.addressIdn")}</Text>
+            <Text color={"white"}>{t("common.footer.addressLn")}</Text>
           </VStack>
   
           <VStack gap={5} alignItems={"left"} mt={{base:20, md:0}}>
-          <Text fontSize={"24px"}>{t("common.menu")}</Text>
+          <Text color={"white"} fontSize={"24px"}>{t("common.menu")}</Text>
             {Navigation.map((link, idx) => (
               <Link display={"block"} href={link.link} key={idx}>
-                <Text fontSize={"20px"}  >
+                <Text color={"white"} fontSize={"20px"}  >
                   {link.name}
                 </Text>
               </Link>
