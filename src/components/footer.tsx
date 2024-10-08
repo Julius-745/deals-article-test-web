@@ -37,7 +37,7 @@ import {
           </VStack>
 
           <VStack maxW={{base:"", lg: "20%"}} alignItems={"left"} gap={8}>
-            <Text fontSize={"24px"} >{t("common.footer.contact")}</Text>
+            <Text  color={"white"} fontSize={"24px"} >{t("common.footer.contact")}</Text>
             <Text color={"white"}>deals@deals.com</Text>
             <Text color={"white"}>{t("common.footer.addressIdn")}</Text>
             <Text color={"white"}>{t("common.footer.addressLn")}</Text>
