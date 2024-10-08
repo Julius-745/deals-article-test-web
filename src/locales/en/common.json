@@ -1,0 +1,19 @@
+{
+    "navbar": {
+        "contactUs": "Contact Us"
+    },
+    "menu": "Menu",
+    "footer": {
+        "shortDesc" : "Latest Job Vacancies and Locker Website in Indonesia",
+        "description": "Dealls is the #1 job portal and job search website in Indonesia with quality job vacancies from 3,500+ top companies. Dealls also comes with a free mentoring program for career development & CV Review to help job seekers find their dream career more easily.",
+        "otherDesc": "Get new job opportunities & learn from the best Mentors in Indonesia",
+        "download": "Download Deals: Jobs & Mentoring",
+        "addressIdn": "Duta Tower Lt. 7, Jl. H. R. Rasuna Said No. 5, Setiabudi, South Jakarta 12910",
+        "addressLn": "160 Robinson Road #20-03 Singapore, 068914",
+        "menuTitle": "Menu",
+        "contact": "Contact"
+    },
+    "article": {
+        "title": "Dealls Article"
+    }
+}
